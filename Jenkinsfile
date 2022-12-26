@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                echo "Build stage."
+                docker build -t hello-world-app .
+                echo "Docker image has built."
             }
         }
         stage("test") {
@@ -13,7 +14,7 @@ pipeline {
         }
         stage("deploy") {
             steps {
-                echo "deploy stage."
+                echo "Deploy stage."
             }
         }
     }
