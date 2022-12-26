@@ -1,7 +1,7 @@
 # Stage-1
 FROM maven:3.5.0-jdk-8-alpine AS buildtool
-ADD ./spring-boot-helloworld/pom.xml pom.xml
-ADD ./spring-boot-helloworld/src src/
+ADD ./pom.xml pom.xml
+ADD ./src src/
 RUN mvn clean package
 
 #Stage-2
