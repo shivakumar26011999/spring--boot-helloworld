@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                docker build -t hello-world-app .
-                echo "Docker image has built."
+                sh """
+                   docker build -t hello-world-app .
+                   echo "Docker image has built."
+                """
             }
         }
         stage("test") {
